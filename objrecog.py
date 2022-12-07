@@ -1,6 +1,9 @@
+#Make sure to save the downloaded video in the same folder as the project
+
+
 import cv2
 
-# Airport Object Detection System
+# Object Detection System
 
 print("Developer: Aditya Singh")
 
@@ -8,9 +11,9 @@ print("Developer: Aditya Singh")
 thres = 0.5 #Threshold to detect objects
 
 
-cap = cv2.VideoCapture("street2.mp4")
+cap = cv2.VideoCapture(" ") #Enter the name of the video file between the inverted commas
 classNames = []
-classFile = r'/Users/adityasingh/Downloads/sonyproject/Labels.txt'
+classFile = 'Labels.txt'
 with open(classFile, 'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
@@ -41,5 +44,5 @@ while True:
 
 
 
-    cv2.imshow("Aditya Singh(Sony SSUP Recruitment Demo Project)", img)
+    cv2.imshow("Object Recognition Software", img)
     cv2.waitKey(1)
